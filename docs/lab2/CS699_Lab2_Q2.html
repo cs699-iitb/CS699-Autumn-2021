@@ -1,0 +1,315 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Part 2 - CS699 Autumn 2021</title>
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../Welcome.html">Welcome</a></li><li class="chapter-item "><a href="../Bulletin_Board.html">Bulletin Board</a></li><li class="chapter-item "><a href="../Changelog.html">Changelog</a></li><li class="spacer"></li><li class="chapter-item "><a href="../lab1/CS699_Lab1.html">Lab 1</a></li><li class="chapter-item expanded "><a href="../lab2/CS699_Lab2.html">Lab 2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../lab2/CS699_Lab2_Q1.html">Part 1</a></li><li class="chapter-item expanded "><a href="../lab2/CS699_Lab2_Q2.html" class="active">Part 2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../lab2/intro_to_github_classroom.html">Introduction to GitHub Classroom</a></li><li class="chapter-item "><a href="../lab2/git_github.html">Git and GitHub</a></li></ol></li><li class="chapter-item "><a href="../lab2/CS699_Lab2_Q3.html">Part 3</a></li><li class="chapter-item "><a href="../lab2/CS699_Lab2_Helpline_Submission_Guide.html">Submission Guidelines</a></li></ol></li><li class="chapter-item "><div>Lab 3</div></li><li class="chapter-item "><div>Lab 4</div></li><li class="chapter-item "><div>Lab 5</div></li><li class="chapter-item "><div>Lab 6</div></li><li class="chapter-item "><div>Lab 7</div></li><li class="chapter-item "><div>Lab 8</div></li><li class="chapter-item "><div>Lab 9</div></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">CS699 Autumn 2021</h1>
+
+                    <div class="right-buttons">
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <center>
+  <h2>
+	CS699: Software Foundation Lab<br>
+	Lab 2:  Bash Scripting and Git Usage<br>
+  Part 2 - Math using Bash
+  </h2>
+</center>
+<hr />
+<ul>
+<li><a href="#aim">Aim</a></li>
+<li><a href="#given">Given</a></li>
+<li><a href="#procedure">Procedure</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+<hr />
+<h2 id="aim"><a class="header" href="#aim">Aim</a></h2>
+<ul>
+<li>Write a Bash or Shell (<code>.sh</code>) script to take an integer list of any length as a command line argument.</li>
+<li>Arguments should be space separated as shown below.</li>
+<li>Your script <code>lab2_q2.sh</code> should be able to display the length of the array in the first line and sum of the cubes of each number in the second line. There should be only two lines output, no space, no extra characters.</li>
+<li>For example, to execute the script:
+<pre><code class="language-shell">./lab2_q2.sh 1 2 3 4 5
+</code></pre>
+Output of above command should be exactly:
+<pre><code class="language-shell">5
+225
+</code></pre>
+</li>
+<li>Explanation: 1<sup>3</sup> + 2<sup>3</sup> + 3<sup>3</sup> + 4<sup>3</sup> + 5<sup>3</sup> = 225</li>
+</ul>
+<hr />
+<h2 id="given"><a class="header" href="#given">Given</a></h2>
+<ul>
+<li>Skeleton program file: <code>lab2_q2.sh</code></li>
+</ul>
+<hr />
+<h2 id="procedure"><a class="header" href="#procedure">Procedure</a></h2>
+<ul>
+<li>
+<p>Visit your <strong>private repository for Part 2</strong> that you must have received access to after performing the steps as mentioned in <a href="./intro_to_github_classroom.html">Introduction to GitHub Classroom</a> document.</p>
+</li>
+<li>
+<p>Copy the Clone HTTPS URL of your repository as shown in Figure 1.</p>
+<center><img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/cs699_autumn_2021/assets/lab_2/q2/1_Copy_Private_Repository_URL_from_the_GitHub_website.png" alt="1_Copy_Private_Repository_URL_from_the_GitHub_website" style="zoom:100%;" /></center>
+<center>Figure 1: Copy Private Repository URL from the GitHub website.</center>
+<br>
+</li>
+<li>
+<p>Open Terminal and navigate to the directory where you want to clone your repository.</p>
+</li>
+<li>
+<p>Now, clone the repository into your machine using the following command:</p>
+<pre><code class="language-shell">https://github.com/CS699-IITB-Autumn-2021/lab2-q2-math-using-bash-&lt;username&gt;.git
+</code></pre>
+</li>
+<li>
+<p>Navigate to the cloned repo folder and modify the provided <code>lab2_q2.sh</code> file. Make this file executable and run as mentioned in <strong>Aim</strong> section.</p>
+</li>
+<li>
+<p>After you are satisfied with your output and want to push your code to the repo, follow the below steps:</p>
+<ol>
+<li>
+<p>Run,</p>
+<pre><code class="language-bash">git status
+</code></pre>
+<p>to check the status of your file. You will observe that state is <strong>modified</strong>.</p>
+</li>
+<li>
+<p>Now run,</p>
+<pre><code class="language-bash">git add lab2_q2.sh
+</code></pre>
+<p>to stage the modified file in the directory.</p>
+</li>
+<li>
+<p>Run</p>
+<pre><code class="language-bash">git status
+</code></pre>
+<p>again, to verify whether the file is staged.</p>
+</li>
+<li>
+<p>Run</p>
+<pre><code class="language-bash">git commit -m &quot;type message for your commit here&quot;
+</code></pre>
+<p>to commit the file which is staged.</p>
+</li>
+<li>
+<p>Run</p>
+<pre><code class="language-bash">git status
+</code></pre>
+<p>to verify that your working tree is clean.</p>
+</li>
+<li>
+<p>Lastly, run</p>
+<pre><code class="language-bash">git push origin master
+</code></pre>
+<p>Make sure that you enter your <strong>GitHub username and password</strong>.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>If your code passed all the test cases, you will observe a ✅ next to the commit as shown in Figure 2.</p>
+<center><img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/cs699_autumn_2021/assets/lab_2/q2/2_Successful_attempt_to_clear_all_the_test_cases.png" alt="2_Successful_attempt_to_clear_all_the_test_cases" style="zoom:100%;" /></center>
+<center>Figure 2: Successful attempt to clear all the test cases.</center>
+<br>
+</li>
+<li>
+<p>You can review the result of all your commits by visiting the <strong>Actions</strong> tab in your Assignment repository as shown in Figure 3.</p>
+<center><img src="https://raw.githubusercontent.com/kalindkaria/typora-md-assets/master/cs699_autumn_2021/assets/lab_2/q2/3_Reviewing_the_result_of_each_commit_on_GitHub.png" alt="3_Reviewing_the_result_of_each_commit_on_GitHub" style="zoom:100%;" /></center>
+<center>Figure 3: Reviewing the result of each commit on GitHub.</center>
+<br>
+</li>
+<li>
+<p>Voila! You have now successfully completed the <em><strong>Part 2</strong></em>.</p>
+</li>
+</ul>
+<hr />
+<p>To check the content of folder <code>q2</code>:</p>
+<pre><code class="language-shell">$ ls -A q2/
+</code></pre>
+<p>Output of above command should look like:</p>
+<pre><code class="language-shell">q2
+└── lab2_q2.sh
+</code></pre>
+<p><strong>Part 2</strong> will be checked via <em><strong>auto-grader</strong></em>, so make sure the filename is not changed and folder <code>q2</code> consists of just one file.</p>
+<hr />
+<h2 id="references"><a class="header" href="#references">References</a></h2>
+<ul>
+<li><a href="https://training.github.com/downloads/github-git-cheat-sheet.pdf" target="blank">GitHub Cheat Sheet</a></li>
+<li><a href="https://ndpsoftware.com/git-cheatsheet.html#loc=index" target="blank">Online GitHub Cheat Sheet</a></li>
+<li><a href="http://git-school.github.io/visualizing-git/" target="blank">Visualizing Git</a></li>
+</ul>
+<br>
+<hr />
+<center><b>
+ALL THE BEST<br>
+When you see a door with <em>push</em> sign, <em>pull</em> first to avoid conflicts!
+</b></center>
+<hr />
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../lab2/CS699_Lab2_Q1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../lab2/intro_to_github_classroom.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../lab2/CS699_Lab2_Q1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../lab2/intro_to_github_classroom.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

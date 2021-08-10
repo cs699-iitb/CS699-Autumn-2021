@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Changelog - CS699 Autumn 2021</title>
+        <title>Submission Guidelines - CS699 Autumn 2021</title>
         <!-- Custom HTML head -->
         
 
@@ -12,18 +12,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
         <!-- MathJax -->
@@ -32,7 +32,7 @@
     <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
-            var path_to_root = "";
+            var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
         </script>
 
@@ -78,7 +78,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item "><a href="Welcome.html">Welcome</a></li><li class="chapter-item "><a href="Bulletin_Board.html">Bulletin Board</a></li><li class="chapter-item expanded "><a href="Changelog.html" class="active">Changelog</a></li><li class="spacer"></li><li class="chapter-item "><a href="lab1/CS699_Lab1.html">Lab 1</a></li><li class="chapter-item "><a href="lab2/CS699_Lab2.html">Lab 2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="lab2/CS699_Lab2_Q1.html">Part 1</a></li><li class="chapter-item "><a href="lab2/CS699_Lab2_Q2.html">Part 2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="lab2/intro_to_github_classroom.html">Introduction to GitHub Classroom</a></li><li class="chapter-item "><a href="lab2/git_github.html">Git and GitHub</a></li></ol></li><li class="chapter-item "><a href="lab2/CS699_Lab2_Q3.html">Part 3</a></li><li class="chapter-item "><a href="lab2/CS699_Lab2_Helpline_Submission_Guide.html">Submission Guidelines</a></li></ol></li><li class="chapter-item "><div>Lab 3</div></li><li class="chapter-item "><div>Lab 4</div></li><li class="chapter-item "><div>Lab 5</div></li><li class="chapter-item "><div>Lab 6</div></li><li class="chapter-item "><div>Lab 7</div></li><li class="chapter-item "><div>Lab 8</div></li><li class="chapter-item "><div>Lab 9</div></li></ol>
+                <ol class="chapter"><li class="chapter-item "><a href="../Welcome.html">Welcome</a></li><li class="chapter-item "><a href="../Bulletin_Board.html">Bulletin Board</a></li><li class="chapter-item "><a href="../Changelog.html">Changelog</a></li><li class="spacer"></li><li class="chapter-item "><a href="../lab1/CS699_Lab1.html">Lab 1</a></li><li class="chapter-item expanded "><a href="../lab2/CS699_Lab2.html">Lab 2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../lab2/CS699_Lab2_Q1.html">Part 1</a></li><li class="chapter-item "><a href="../lab2/CS699_Lab2_Q2.html">Part 2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../lab2/intro_to_github_classroom.html">Introduction to GitHub Classroom</a></li><li class="chapter-item "><a href="../lab2/git_github.html">Git and GitHub</a></li></ol></li><li class="chapter-item "><a href="../lab2/CS699_Lab2_Q3.html">Part 3</a></li><li class="chapter-item expanded "><a href="../lab2/CS699_Lab2_Helpline_Submission_Guide.html" class="active">Submission Guidelines</a></li></ol></li><li class="chapter-item "><div>Lab 3</div></li><li class="chapter-item "><div>Lab 4</div></li><li class="chapter-item "><div>Lab 5</div></li><li class="chapter-item "><div>Lab 6</div></li><li class="chapter-item "><div>Lab 7</div></li><li class="chapter-item "><div>Lab 8</div></li><li class="chapter-item "><div>Lab 9</div></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -138,108 +138,113 @@
                         <center>
     <h2>
 	CS699: Software Foundation Lab<br>
-	Changelog
+	Lab 2:  Bash Scripting and Git Usage<br>
+  Helpline and Submission Guidelines
     </h2>
 </center>
 <hr />
-<blockquote>
-<p>All notable changes to this Course will be documented in this file.</p>
-<p>The format is based on <a href="https://keepachangelog.com/en/1.0.0/" target="blank">Keep a Changelog</a>, and this document adheres to <a href="https://semver.org/spec/v2.0.0.html" target="blank">Semantic Versioning</a>.</p>
-</blockquote>
-<hr />
-<!--
-
----
-
-## 0.1.4 - 2021-06-28
-
-### Added
-
-- Section 2
-  - PDF slides of all modules on Downloads page.
-  - Files of Experiments on Downloads page.
-  - ReadMe documents of Experiments.
-- Section 3
-  - PDF slides of all modules on Downloads page.
-  - Files of Experiments on Downloads page.
-  - ReadMe documents of Experiments.
-- Section 4
-  - PDF slides of all modules on Downloads page.
-  - Files of Experiments on Downloads page.
-  - ReadMe documents of Experiments.
-- Live Session
-  - Recordings of 3 sessions.
-
-<br>
-
----
-
-## 0.1.3 - 2021-06-22
-
-### Added
-
-- Section 1
-  - ReadMe document on *Get familiar with software*
-  - Project folder of `blink_led_simulation` (.zip files) for Windows and Linux OS and Circuit (.simu file), available on Downloads page.
-
-<br>
-
----
-
-## 0.1.2 - 2021-06-21
-
-### Added
-
-- Installation Instructions for Ubuntu (Linux) OS.
-- Section 1
-  - Slides used in Session of *Number Systems and Logic Gates*, available on Downloads page.
-  - Slides used in Session of *Masking*, available on Downloads page.
-
-<br>
-
----
-
--->
-<h2 id="011---2021-08-10"><a class="header" href="#011---2021-08-10">0.1.1 - 2021-08-10</a></h2>
-<h3 id="added"><a class="header" href="#added">Added</a></h3>
 <ul>
-<li>Lab 2
-<ul>
-<li>Lecture Recording and Slides on Git and Vim</li>
-<li>ReadMe documents for Parts 1, 2 and 3</li>
-<li>Git and GitHub introduction</li>
+<li><a href="#helpline-for-lab-2">Helpline for Lab 2</a></li>
+<li><a href="#submission-guidelines">Submission Guidelines</a></li>
+<li><a href="#for-enthu-juntapunters-p">For enthu junta/punters :P</a></li>
 </ul>
+<hr />
+<h2 id="helpline-for-lab-2"><a class="header" href="#helpline-for-lab-2">Helpline for Lab 2</a></h2>
+<ol>
+<li>Solution for Parts 2 and 3 is to be typed into the <code>.sh</code> file already provided.</li>
+<li>Remember, you need to change the permission of the <code>.sh</code> file before executing it:
+<pre><code class="language-shell">chmod u+x &lt;script_file.sh&gt;
+</code></pre>
 </li>
-<li>Bulletin Board for all announcements at one place</li>
-</ul>
-<br>
+<li>Do not change the structure and the file/folder names. The <em><strong>auto-grader</strong></em> will give a &quot;<em>Not Submitted</em>&quot; grade otherwise, if it does not find the correct names.</li>
+<li>Remember to follow the exact output formats specified. Extra characters will lead to incorrect evaluation by <em><strong>auto-grader</strong></em>.</li>
+<li>Inside the script if you use or generate any temporary file, write command to remove it after the operation within that script only.</li>
+</ol>
 <hr />
-<h2 id="010---2021-08-03"><a class="header" href="#010---2021-08-03">0.1.0 - 2021-08-03</a></h2>
-<h3 id="added-1"><a class="header" href="#added-1">Added</a></h3>
+<h2 id="submission-guidelines"><a class="header" href="#submission-guidelines">Submission Guidelines</a></h2>
+<p><strong>Strictly follow the instructions given below:</strong></p>
 <ul>
 <li>
-<p>Lab 1</p>
+<p>Create a file <code>readme.md</code> in <code>&lt;roll_number&gt;</code> directory, which contains your Name, Roll no. and References, along with Git username.</p>
+</li>
+<li>
+<p>Compress the directory to <strong>.tar</strong> file named <code>&lt;roll_number&gt;.tar.gz</code>.</p>
+</li>
+<li>
+<p>Push all of the folder structure on a <em><strong>private Git repository</strong></em>, provide Git username in the readme file.</p>
+</li>
+<li>
+<p>Please strictly follow the submission format, else there'll be a 10% penalty.</p>
+</li>
+<li>
+<p>Parts 2 and 3 will be graded by the <em><strong>auto-grader</strong></em> so strictly follow output format.</p>
+</li>
+<li>
+<p>For Part 2, you need to accept the Github Assignment and submit it to the private repo of that Assignment as well as on Moodle.</p>
+</li>
+<li>
+<p>The submission directory structure should be as follows (nothing more nothing less):</p>
+<pre><code class="language-shell">  roll_number
+  ├── q1
+  │   ├── .bashrc
+  │   ├── screenshot_of_sub-partA.png
+  │   └── screenshot_of_sub-partB.png
+  ├── q2
+  │   └── lab2_q2.sh
+  ├── q3
+  │   ├── files
+  │   │   ├── dir1
+  │   │   │   └── addicted.txt
+  │   │   ├── dir2
+  │   │   │   └── seeyouagain.txt
+  │   │   ├── ilikeit.txt
+  │   │   └── temprature.txt
+  │   ├── lab2_q3.sh
+  │   ├── list.txt
+  │   └── output.txt
+  └── readme.md
+</code></pre>
+</li>
+</ul>
+<hr />
+<h2 id="for-enthu-juntapunters-p"><a class="header" href="#for-enthu-juntapunters-p">For enthu junta/punters :P</a></h2>
+<p>We know this already seems hectic but in case you have some time left, and are enthu to learn more, you can do:</p>
+<ol>
+<li>
+<p><strong>Bash modification</strong></p>
 <ul>
-<li>ReadMe document</li>
-<li>Introductory Lecture Recording and Slides</li>
+<li>You know BASh since you are using it now, but do you know &quot;<em>ZSH</em>&quot;, &quot;<em>Oh-my-ZSH</em>&quot; and other bash themes.</li>
+<li>You could look here, if a fancy bash (with more features and much better looking) interests you:
+<ul>
+<li><a href="https://ohmyz.sh/" target="_blank">https://ohmyz.sh/</a></li>
+<li><a href="https://github.com/ohmyzsh/ohmyzsh" target="_blank">https://github.com/ohmyzsh/ohmyzsh</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
-<p>Welcome to <strong>CS699 : Software Foundation Lab</strong> course.</p>
+<p><strong>Googler</strong></p>
+<ul>
+<li>Do you know that you can Google stuff over the Terminal itself (for the ultra-geeks)?</li>
+<li>Try this:
+<ul>
+<li><a href="https://github.com/jarun/googler" target="_blank">https://github.com/jarun/googler</a></li>
+</ul>
 </li>
 </ul>
+</li>
+</ol>
 <br>
+<hr />
+<center><b>ALL THE BEST</b></center>
 <hr />
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="Bulletin_Board.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../lab2/CS699_Lab2_Q3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
-                            </a>
-                            <a rel="next" href="lab1/CS699_Lab1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
                     </nav>
@@ -247,11 +252,8 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="Bulletin_Board.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../lab2/CS699_Lab2_Q3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
-                    </a>
-                    <a rel="next" href="lab1/CS699_Lab1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
 
@@ -260,12 +262,12 @@
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
     </body>

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Welcome - CS699 Autumn 2021</title>
+        <title>Part 1 - CS699 Autumn 2021</title>
         <!-- Custom HTML head -->
         
 
@@ -12,18 +12,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
         <!-- MathJax -->
@@ -32,7 +32,7 @@
     <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
-            var path_to_root = "";
+            var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
         </script>
 
@@ -78,7 +78,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="Welcome.html">Welcome</a></li><li class="chapter-item "><a href="Bulletin_Board.html">Bulletin Board</a></li><li class="chapter-item "><a href="Changelog.html">Changelog</a></li><li class="spacer"></li><li class="chapter-item "><a href="lab1/CS699_Lab1.html">Lab 1</a></li><li class="chapter-item "><a href="lab2/CS699_Lab2.html">Lab 2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="lab2/CS699_Lab2_Q1.html">Part 1</a></li><li class="chapter-item "><a href="lab2/CS699_Lab2_Q2.html">Part 2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="lab2/intro_to_github_classroom.html">Introduction to GitHub Classroom</a></li><li class="chapter-item "><a href="lab2/git_github.html">Git and GitHub</a></li></ol></li><li class="chapter-item "><a href="lab2/CS699_Lab2_Q3.html">Part 3</a></li><li class="chapter-item "><a href="lab2/CS699_Lab2_Helpline_Submission_Guide.html">Submission Guidelines</a></li></ol></li><li class="chapter-item "><div>Lab 3</div></li><li class="chapter-item "><div>Lab 4</div></li><li class="chapter-item "><div>Lab 5</div></li><li class="chapter-item "><div>Lab 6</div></li><li class="chapter-item "><div>Lab 7</div></li><li class="chapter-item "><div>Lab 8</div></li><li class="chapter-item "><div>Lab 9</div></li></ol>
+                <ol class="chapter"><li class="chapter-item "><a href="../Welcome.html">Welcome</a></li><li class="chapter-item "><a href="../Bulletin_Board.html">Bulletin Board</a></li><li class="chapter-item "><a href="../Changelog.html">Changelog</a></li><li class="spacer"></li><li class="chapter-item "><a href="../lab1/CS699_Lab1.html">Lab 1</a></li><li class="chapter-item expanded "><a href="../lab2/CS699_Lab2.html">Lab 2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../lab2/CS699_Lab2_Q1.html" class="active">Part 1</a></li><li class="chapter-item "><a href="../lab2/CS699_Lab2_Q2.html">Part 2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../lab2/intro_to_github_classroom.html">Introduction to GitHub Classroom</a></li><li class="chapter-item "><a href="../lab2/git_github.html">Git and GitHub</a></li></ol></li><li class="chapter-item "><a href="../lab2/CS699_Lab2_Q3.html">Part 3</a></li><li class="chapter-item "><a href="../lab2/CS699_Lab2_Helpline_Submission_Guide.html">Submission Guidelines</a></li></ol></li><li class="chapter-item "><div>Lab 3</div></li><li class="chapter-item "><div>Lab 4</div></li><li class="chapter-item "><div>Lab 5</div></li><li class="chapter-item "><div>Lab 6</div></li><li class="chapter-item "><div>Lab 7</div></li><li class="chapter-item "><div>Lab 8</div></li><li class="chapter-item "><div>Lab 9</div></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -136,54 +136,69 @@
                 <div id="content" class="content">
                     <main>
                         <center>
-    <h1 id="welcome-to-cs699-software-foundation-lab"><a class="header" href="#welcome-to-cs699-software-foundation-lab">Welcome to CS699: Software Foundation Lab!</a></h1>
-    <h2 id="instructor-prof-kavi-arya"><a class="header" href="#instructor-prof-kavi-arya">Instructor: Prof. Kavi Arya</a></h2>
+    <h2>
+	CS699: Software Foundation Lab<br>
+	Lab 2:  Bash Scripting and Git Usage<br>
+  Part 1 - Exploring bashrc
+    </h2>
 </center>
 <hr />
-<h2 id="lab-schedule"><a class="header" href="#lab-schedule">Lab Schedule</a></h2>
-<table><thead><tr><th align="center">Week #</th><th align="center">Lab</th><th align="center">Launch Date</th></tr></thead><tbody>
-<tr><td align="center">1</td><td align="center"><a href="./lab1/CS699_Lab1.html">Environment Setup / Basic Linux &amp; WebDev</a></td><td align="center">04-08-2021</td></tr>
-<tr><td align="center">2</td><td align="center"><a href="./lab2/CS699_Lab2.html">Bash basics + Git + Markdown</a></td><td align="center">11-08-2021</td></tr>
-<tr><td align="center">3</td><td align="center">SED/AWK  + Project Announcement</td><td align="center">18-08-2021</td></tr>
-<tr><td align="center">4</td><td align="center">Latex Basic + Advanced</td><td align="center">25-08-2021</td></tr>
-<tr><td align="center">5</td><td align="center">Python Basics</td><td align="center">01-09-2021</td></tr>
-<tr><td align="center">6</td><td align="center">Python Advanced</td><td align="center">08-09-2021</td></tr>
-<tr><td align="center">7</td><td align="center">Mid-Sem slot Initial Presentation</td><td align="center">15-09-2021</td></tr>
-<tr><td align="center">8</td><td align="center">Web-scraping / DB / Networking</td><td align="center">22-09-2021</td></tr>
-<tr><td align="center">9</td><td align="center">Initial PPTs</td><td align="center">29-09-2021</td></tr>
-<tr><td align="center">10</td><td align="center">Java Basics/Android Basics</td><td align="center">06-10-2021</td></tr>
-<tr><td align="center">11</td><td align="center">Make/Cmake</td><td align="center">13-10-2021</td></tr>
-<tr><td align="center">12</td><td align="center">Project Week</td><td align="center">20-10-2021</td></tr>
-<tr><td align="center">13</td><td align="center">Project PPT</td><td align="center">27-10-2021</td></tr>
-<tr><td align="center">14</td><td align="center">Project PPT / EndSem</td><td align="center">08-11-2021 to 20-11-2021</td></tr>
-</tbody></table>
+<ul>
+<li><a href="#sub-part-a">SUB-PART A</a>
+<ul>
+<li><a href="#aim">Aim</a></li>
+</ul>
+</li>
+<li><a href="#sub-part-b">SUB-PART B</a>
+<ul>
+<li><a href="#aim-1">Aim</a></li>
+</ul>
+</li>
+</ul>
 <hr />
-<h3 id="course-introduction-video"><a class="header" href="#course-introduction-video">Course Introduction Video</a></h3>
-<iframe src="https://drive.google.com/file/d/1np_T83NrB__hybRgvI4ZCrvpZuBWgPku/preview" width="720" height="480" allow="autoplay">
-</iframe>
-<p>Link to the slides:</p>
-<center><a href="./resources/Week_1/2021_07_28_CS699_intro.pdf" target="blank"><button type="button">Download</button></a></center>
+<h2 id="sub-part-a"><a class="header" href="#sub-part-a">SUB-PART A</a></h2>
+<h3 id="aim"><a class="header" href="#aim">Aim</a></h3>
+<ul>
+<li>You are required to modify your <code>.bashrc</code> file (which is a hidden file in your <code>home</code> folder) and create an alias inside it.</li>
+<li>The alias should be able to get the space usage of all the files and folders and display it on your screen.</li>
+<li>The output of your script should display a list of files and folders in the current directory on the Terminal (to be more &quot;precise&quot;).</li>
+<li>You should take a screenshot of the output, when your script is executed in the &quot;home&quot; folder and paste the <code>.jpg</code> or <code>.png</code> in the folder named <code>q1</code>.</li>
+<li>You are also required to paste the <code>.bashrc</code> file in the folder <code>q1</code>.</li>
+</ul>
 <hr />
-<!--
-
-### Course Plan
-
-|   Components   | Weightage |
-| :-------:  | :-----------: |
-|     Nine Labs       |       45        |
-|     Quizzes       |      15         |
-|     Project Initial       |       10        |
-|     Project Final       |       20        |
-|     Project Documentation/Work Products       |       10        |
-|     **Total**       |      **100**         |
-
--->
+<h2 id="sub-part-b"><a class="header" href="#sub-part-b">SUB-PART B</a></h2>
+<h3 id="aim-1"><a class="header" href="#aim-1">Aim</a></h3>
+<ul>
+<li>You are 'yet-again' required to change your <code>.bashrc</code> file to display your &quot;NAME&quot; every time you log on to your Linux (e.g. Ubuntu) Terminal.</li>
+<li>It should be an ASCII art which can be created using the web-service: <a href="http://patorjk.com/software/taag/#p=display&f=Graffiti&t=sample" target="_blank">link</a>.</li>
+<li>The link above allows you to type any text and create ASCII art of the text using special characters on your keyboard. You can add such text to your <code>.bashrc</code> file and try logging in again to the Terminal.</li>
+<li>When your welcome message is displayed, please take a screenshot similar to the last statement and paste in the folder <code>q1</code>.</li>
+<li>You must also paste your modified <code>.bashrc</code> file in the folder <code>q1</code>.</li>
+</ul>
+<hr />
+<p>To check the content of folder <code>q1</code>:</p>
+<pre><code class="language-shell">$ ls -A q1/
+</code></pre>
+<p>Output of above command should look like:</p>
+<pre><code class="language-shell">q1
+├── .bashrc
+├── screenshot_of_sub-partA.png
+└── screenshot_of_sub-partB.png
+</code></pre>
+<p><strong>Part 1</strong> will be checked manually and graded accordingly.</p>
+<br>
+<hr />
+<center><b>ALL THE BEST</b></center>
+<hr />
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="next" href="Bulletin_Board.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="prev" href="../lab2/CS699_Lab2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../lab2/CS699_Lab2_Q2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -192,7 +207,10 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="next" href="Bulletin_Board.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="prev" href="../lab2/CS699_Lab2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../lab2/CS699_Lab2_Q2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
@@ -202,12 +220,12 @@
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
     </body>

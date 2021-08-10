@@ -1,0 +1,364 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Lab 1 - CS699 Autumn 2021</title>
+        <!-- Custom HTML head -->
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../Welcome.html">Welcome</a></li><li class="chapter-item "><a href="../Bulletin_Board.html">Bulletin Board</a></li><li class="chapter-item "><a href="../Changelog.html">Changelog</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../lab1/CS699_Lab1.html" class="active">Lab 1</a></li><li class="chapter-item "><a href="../lab2/CS699_Lab2.html">Lab 2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../lab2/CS699_Lab2_Q1.html">Part 1</a></li><li class="chapter-item "><a href="../lab2/CS699_Lab2_Q2.html">Part 2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../lab2/intro_to_github_classroom.html">Introduction to GitHub Classroom</a></li><li class="chapter-item "><a href="../lab2/git_github.html">Git and GitHub</a></li></ol></li><li class="chapter-item "><a href="../lab2/CS699_Lab2_Q3.html">Part 3</a></li><li class="chapter-item "><a href="../lab2/CS699_Lab2_Helpline_Submission_Guide.html">Submission Guidelines</a></li></ol></li><li class="chapter-item "><div>Lab 3</div></li><li class="chapter-item "><div>Lab 4</div></li><li class="chapter-item "><div>Lab 5</div></li><li class="chapter-item "><div>Lab 6</div></li><li class="chapter-item "><div>Lab 7</div></li><li class="chapter-item "><div>Lab 8</div></li><li class="chapter-item "><div>Lab 9</div></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">CS699 Autumn 2021</h1>
+
+                    <div class="right-buttons">
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <center>
+    <h2>
+	CS699: Software Foundation Lab<br>
+	Lab 1:  Linux Basics and HTML, CSS, JavaScript, Bootstrap
+    </h2>
+</center>
+<hr />
+<ul>
+<li><a href="#part-1---linux-basics">PART 1 - Linux Basics</a></li>
+<li><a href="#part-2---html-css-javascript-bootstrap">PART 2 - HTML, CSS, JavaScript, Bootstrap</a>
+<ul>
+<li><a href="#aim">Aim</a></li>
+<li><a href="#submission-guidelines">Submission Guidelines</a></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="part-1---linux-basics"><a class="header" href="#part-1---linux-basics">PART 1 - Linux Basics</a></h2>
+<p>Practice basic Linux commands you will require them in your next lab and throughout the course. Some of the commands are listed in this file:</p>
+<p><a href="../resources/CS699_Lab1_Linux_Basics.pdf" target="_blank">CS699_Lab1_Linux_Basics.pdf</a></p>
+<p>Additional Resources:</p>
+<ul>
+<li><a href = "https://www.hostinger.in/tutorials/linux-commands" target="_blank"> Linux Commands</a></li>
+<li><a href = "https://www.unixtutorial.org/basic-unix-commands" target="_blank">Unix Commands</a></li>
+</ul>
+<p><strong>NOTE:</strong> This part of the assignment does not require a submission from your end but is necessary for practice. Please do not skip this as it is essential that you get comfortable with BASh for the rest of the course.</p>
+<hr />
+<h2 id="part-2---html-css-javascript-bootstrap"><a class="header" href="#part-2---html-css-javascript-bootstrap">PART 2 - HTML, CSS, JavaScript, Bootstrap</a></h2>
+<p>References:</p>
+<ul>
+<li><a href = "https://www.w3schools.com/html/default.asp" target="_blank">HTML</a></li>
+<li><a href = "https://www.w3schools.com/css/default.asp" target="_blank">CSS</a></li>
+<li><a href = "https://www.w3schools.com/js/default.asp" target="_blank">Javascript</a></li>
+<li><a href = "https://www.w3schools.com/bootstrap4/default.asp" target="_blank">Bootstrap</a></li>
+</ul>
+<h3 id="aim"><a class="header" href="#aim">Aim</a></h3>
+<p>Create a fancy webpage about yourself on IITB CSE Department students info page using <strong>HTML5​, CSS​, JavaScript and ​Bootstrap</strong>. [Make it as attractive as you can]</p>
+<p>Your webpage should have a <em>side navigation</em> menu with at least 5 fields namely <strong>Home​, Projects, Hobbies​, Education, Register</strong>.</p>
+<p><strong><u>Few standards you must follow</u></strong></p>
+<ul>
+<li>
+<p><strong>Home</strong></p>
+<ul>
+<li>
+<p>A descriptive introduction of yours (keep in mind this is your first impression and you would want it to be good)</p>
+</li>
+<li>
+<p>At least one image [preferably yours, but not mandatory]</p>
+</li>
+<li>
+<p>An introduction Video [preferably the about yourself, length should be at least 1 minutes 30 secs]. It's best way for your friends to know about you. So be creative and expressive.</p>
+</li>
+<li>
+<p>A ​contact me field with some of your social media profile links [hopefully, that can be used for better reach by your colleagues], if you don’t want to put social media links at least put your <em><strong>LinkedIn</strong></em> and ​<em><strong>gitcse</strong></em> profile link [links should redirect to a new tab/window]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Projects</strong></p>
+<ul>
+<li>Ordered list / Bulleted list of projects you have done.</li>
+</ul>
+</li>
+<li>
+<p><strong>Hobbies</strong></p>
+<ul>
+<li>Use check-boxes to give the option to choose hobbies and a submit button.
+<ul>
+<li>
+<p>Clicking on submit a popup should take confirmation from the user showing all selected hobbies.</p>
+</li>
+<li>
+<p>When the user confirms, a description of all selected hobbies should appear on webpage.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Education​</strong></p>
+<ul>
+<li>A table of your academic record</li>
+</ul>
+</li>
+<li>
+<p><strong>Register</strong></p>
+<ul>
+<li>Have a form with text fields name​, email ​ id and Tell me about Yourself (you can add more...) for your fellow mates to tell you about themselves and share their opinion on your webpage (you may embed a google form​).</li>
+</ul>
+</li>
+</ul>
+<p><strong><u>Tools to explore</u></strong></p>
+<ul>
+<li>
+<p><strong>CSS</strong></p>
+<ul>
+<li>Make use of class and id selectors</li>
+<li>Try all ways to insert CSS</li>
+<li>Inline: Properties are specified inside the HTML tag</li>
+<li>Internal: Properties are specified within the head section</li>
+<li>External: Properties are specified in an external style sheet</li>
+<li>Change background and font colors</li>
+<li>Play around with font sizes and family</li>
+<li>Center align the table as a whole</li>
+<li>All images should have a hover description</li>
+</ul>
+</li>
+<li>
+<p><strong>JAVASCRIPT / BOOTSTRAP</strong></p>
+<ul>
+<li>
+<p>In the Hobbies, clicking on submit a popup should take confirmation from the user showing all selected hobbies. (<em>Use JavaScript events</em>)</p>
+</li>
+<li>
+<p>The question that you need to ask yourself is whether your webpage renders the same on mobile / tablet as it does on PC. Does it? Maybe not. Try adding ​ Bootstrap​ to your page so that it renders the same everywhere. Pages with bootstrap get extra credit! ;)</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong></p>
+<ul>
+<li>As this submission will be your Homepage on IIT Bombay CSE website​. So make it as informative and attractive as you can. Use this opportunity to create something interesting instead of doing it just for the sake of an assignment.</li>
+<li>Please ensure the web page is rendering properly in all the browsers [chrome, Firefox, Edge (yes, even Edge!)].</li>
+<li>If you are using any images or videos or icons, please cite the source of the same.</li>
+<li>You need to put links to all the references you have referred for making this webpage in a readme​ file.</li>
+<li>Every element specified in the problem description carries some marks(Until it is specified optional) so make sure you include all of them.</li>
+</ul>
+</blockquote>
+<h3 id="submission-guidelines"><a class="header" href="#submission-guidelines">Submission Guidelines</a></h3>
+<ul>
+<li>
+<p>For this problem statement, you are required to upload your completed webpage in a <strong>.tar</strong> file named as <strong><code>​&lt;roll_number&gt;.tar.gz</code></strong> and host your webpage on the CSE server.</p>
+</li>
+<li>
+<p>Your submission must contain a <strong>README</strong> file with the following information:</p>
+<pre>
+  README
+  ├── &ltRoll Number&gt
+  ├── &ltName&gt
+  ├── &ltCSE LDAP ID&gt
+  └── References
+  </pre>
+<blockquote>
+<p><strong>NOTE:</strong>
+The CSE LDAP ID would be used to evaluate your assignment which you will
+also host your webpage on the CSE server.</p>
+</blockquote>
+</li>
+<li>
+<p>The submission directory structure should be as follows (nothing more nothing less):</p>
+<pre>
+  roll_number
+  ├── public_html
+  │	└── index.html
+  │	└── other html, css, js, files
+  │	└── images/icons
+  │	└── video
+  └── README
+  </pre>
+</li>
+<li>
+<p>You can use the following command to create a <em><strong>tarball</strong></em> file (equivalent of zip):</p>
+<pre><code class="language-bash">tar -cvzf &lt;roll_number&gt;.tar.gz &lt;roll_number&gt;
+</code></pre>
+<p>where <em><code>&lt;roll_number&gt;.tar.gz</code></em> is the file you will create and <em><code>&lt;roll_number&gt;</code></em> is the folder containing <code>public_html</code> [which contains all the html, css and js files, images, videos, ...] and README file.</p>
+</li>
+<li>
+<p>You can use the following command for hosting your webpage to CSE Server:</p>
+<pre><code class="language-bash">scp -r public_html/* &lt;user_name&gt;@mars.cse.iitb.ac.in:public_html/
+</code></pre>
+<p>where <em><code>&lt;user_name&gt;</code></em> is your CSE LDAP ID</p>
+<blockquote>
+<p><strong>NOTE:</strong></p>
+<ul>
+<li>You will need to start IITB VPN to access the CSE Server. If you have not set up IITB VPN yet, please follow this <a href="https://www.cc.iitb.ac.in/page/configurevpn">link</a>​. [<em>Use your Institute LDAP credentials to login</em>]</li>
+<li>If you are getting <code>“ssh: connect to host mars.cse.iitb.ac.in port 22: No route to host lost connection”</code> error, just restart VPN.</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<br>
+<hr />
+<center><b>ALL THE BEST</b></center>
+<hr />
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Changelog.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../lab2/CS699_Lab2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Changelog.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../lab2/CS699_Lab2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
